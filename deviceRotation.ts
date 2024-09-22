@@ -5,6 +5,8 @@ enum Axis {
     X,
     //% block="Y"
     Y,
+    //% block="Z"
+    Z,
 }
 
 //% icon="❍"
