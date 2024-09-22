@@ -20,7 +20,7 @@ namespace DeviceRotation {
     }
 
     function dirTo(x: number,y: number) {
-        let dir = (Math.atan(x/y) + ((0 > y) ? 180 : 0))
+        let dir = (Math.atan(x/y) + ((0 > y) ? Math.PI : 0))
         return dir
     }
 
