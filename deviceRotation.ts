@@ -19,6 +19,11 @@ namespace DeviceRotation {
         return Sub(num / 1023);
     }
 
+    function dirTo(x: number,y: number) {
+        let dir = (Math.atan(x/y) + ((0 > y) ? 180 : 0))
+        return dir
+    }
+
     function Fix(num: number) {
         if (num >= 0 && num <= 1050) {
             return num;
@@ -40,8 +45,8 @@ namespace DeviceRotation {
         }
     }
 
-    //% block="Get Rotation Using Acceleration $num"
-    export function RotFromAccel(num: number) {
-        return (Final(num));
+    //% block="Get Rotation Using Acceleration X or Y $xOrY and Z $z"
+    export function RotFromAccel(xOrY: number,z: number) {
+        return (dirTo(xOrY,z));
     }
 }
